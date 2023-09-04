@@ -339,9 +339,10 @@ nav li a {
 
 .info-card {
     display: flex;
-    align-items: center;
+    align-items: left;
     gap: 20px;
     max-width: 400px;
+    margin-right: 150px;
 }
 
 .info-card img {
@@ -350,9 +351,12 @@ nav li a {
 }
 
 .what-img {
-    width: 600px;
-    height: 687px;
-    margin-top: 30px;
+    width: 500px;
+    height: 500px;
+    position:absolute;
+    top: 1600px;
+    left: 700px;
+    display: block;
 }
 
 .image-container {
@@ -636,7 +640,9 @@ nav li a {
         display: block;
     }
     nav {
-        position: fixed;
+        position: absolute;
+        justify-content: center;
+        justify-content: space-between;
     }
     .nav-links {
         display: none;
@@ -655,7 +661,7 @@ nav li a {
     }
     .nav-links.active {
         display: flex;
-        transform: translateX(23%);
+        transform: translateX(10%);
     }
     .nav-links li {
         margin: 10px 0;
@@ -699,8 +705,14 @@ nav li a {
         overflow: hidden;
         float: none;
     }
+    .info-card{
+        margin-right: 0;
+    }
     .services h1{
         font-size: 2.5em;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
     .service-cards {
         flex-direction: column;
