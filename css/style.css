@@ -465,100 +465,170 @@ nav li a {
 .testimonial span {
     font-weight: bold;
 }
-/* Styles for the contact section */
-footer {
-    min-height: 55vh;
-    padding: 0px 160px;
-    display: flex;
-    overflow: hidden;
-}
-
-#comp1, #comp2, #comp3 {
-    height: 55vh;
-    width: 400px;
-    padding: 50px;
+.contact-section {
     display: flex;
     flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 16px 10px;
 }
 
-#comp1 {
-    float: left;
-    align-items: flex-start; /* Align content to the left */
+.contact-section h1 {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-#comp1 img {
-    margin-top: 30px;
-    width: 35%;
-    height: 200px;
+.contact-section a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 120px;
 }
 
-#comp1 h2 {
-    margin-top: 30px;
+.contact-section a img {
+    margin-left: 10px;
+}
+
+.footer {
+    background-color: #354a9a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    font-size: 16px;
+  }
+  
+  .footer-left {
+    text-align: center;
+  }
+
+  .footer-left p{
+    font-size: 16px;
+  }
+  
+  .copyright {
+    margin-bottom: 3px;
+    color: #fff;
+  }
+  
+  .font-semibold {
     font-weight: 600;
+  }
+  
+  .built-by {
+    margin-top: 3px;
+    color: #fff;
+  }
+  
+  .builder {
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .footer-right {
+    cursor: pointer;
+  }
+  
+  .social-icon {
+    width: 23px;
+    height: auto;
+    margin: 0 6px;
+    color: #fff;
+  }
+  /* styles.css */
+/* styles.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 96px; 
+}
+
+.header {
+    display: flex;
+    flex-direction: row; /* Changed to row for the desired layout */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo img {
+    margin: 50px; 
+}
+
+.slogan {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    margin-top: 12px;
+    margin-left: 150px;
+}
+
+.phone,
+.email,
+.address {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+    max-width: 60%; /* Limit the width to 60% */
+}
+
+.phone i,
+.email i,
+.address i {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    margin-right: 4px;
+}
+
+.phone p,
+.email p,
+.address p {
+    width: 100%;
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-top: 12px;
+    /* align-items: flex-end; Align quick links to the right */
+}
+
+.quick-links a {
     font-size: 20px;
 }
 
-#comp2 {
-    margin-left: auto; /* Push #comp2 to the right */
+.link {
+    margin: 2px 0;
+    text-decoration: none;
+    color: #000;
 }
 
-#comp2 h3 {
-    font-size: 25px;
-    margin-bottom: 50px;
-}
-
-#comp2 a {
-    font-size: 18px;
-    margin-top: 15px;
-}
-
-#comp2 #links {
-    width: 50%;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align links to the left */
-}
-
-#links a {
-    color: black;
-}
-
-#comp3 {
-    justify-content: flex-start; /* Align content to the left */
-}
-
-#comp3 h3 {
-    font-size: 25px;
-    margin-bottom: 50px;
-}
-
-#info {
-    font-size: 25px;
-}
-
-#info h2 {
-    font-size: 18px;
-    margin-top: 35px;
-    font-weight: 300;
-}
-
-#info i {
-    color: black;
-}
-
-footer #top {
-    position: absolute;
-    width: 50px;
-    color: black;
-    font-size: 25px;
-    line-height: 48px;
-    border-radius: 5px;
-    padding-top: 0%;
-    margin-top: 20%;
-    margin-left: 83%;
-    text-align: center;
-    background-color: #354a9a;
+.link:hover {
+    color: #0080ff;
 }
 
 @media (max-width: 768px) {
@@ -652,5 +722,32 @@ footer #top {
     }
     .product-grid {
         grid-template-columns: 1fr; /* Display products in a single column */
+    }
+    .contact-section a{
+    margin-right: 70px;
+    }
+    .footer-left p{
+        font-size: 14px;
+    }
+    .footer-right{
+        display: none;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .contact-info {
+        align-items: flex-start; 
+        margin-left: 0;
+    }
+    .container{
+        padding: 20px;
+    }
+    .address,
+    .phone,
+    .email {
+        flex-direction: row; 
+        align-items: center; 
     }
 }
