@@ -162,7 +162,7 @@ nav li a {
     border-radius: 20px;
 }
 
-.nav-links li:not(:last-child) a:hover::after {
+.nav-links li:not(:last-child) a:hover::after{
     width: 100%;
 }
 

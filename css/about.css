@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', Helvetica, Georgia, Tahoma;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body,
+h1 {
+    color: #1B1D1B;
+    background: #FAFAFA;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: transparent;
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 150;
+    transition: background-color 0.5s ease;
+    font-weight: lighter;
+}
+
+nav li a {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.info {
+    background-color: #2c4094;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 16px;
+}
+
+.info p {
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+    padding-right: 50px;
+}
+
+.info p i {
+    padding: 10px;
+    font-size: 1.25em;
+}
+
+.logo {
+    position: relative;
+    color: #233D4D;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-text {
+    margin-right: 600px;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #2c4094;
+    display: inline-block;
+    margin-left: -50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 12px;
+    position: relative;
+}
+
+.nav-links li a {
+    color: black;
+    font-weight: normal;
+    font-size: 18px 'Poppins', sans-serif;
+    text-decoration: none;
+    transition: 0.3s;
+    padding-bottom: 3px;
+    position: relative;
+    padding: 4px 12px;
+}
+
+.nav-links li:not(:last-child) a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2c4094;
+}
+
+.nav-links li:last-child a {
+    border: 3px solid #2c4094;
+}
+
+.nav-links li:last-child a {
+    border-radius: 20px;
+    padding: 6px 12px;
+    background-color: transparent;
+    transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+.nav-links li:last-child a:hover {
+    background-color: #2c4094;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.nav-links li:not(:last-child) a:hover::after{
+    width: 100%;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+.hamburger-icon {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    color: #2c4094;
+    background-color: transparent;
+    border: none;
+}
+
+.hamburger-icon::after {
+    content: '\2630';
+    font-size: 24px;
+}
+
+.header {
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 16px;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 2em;
+    border-bottom: 4px solid white;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    margin-left: 40px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding: 96px 80px 64px;
+}
+
+.content-left img {
+    width: 40em;
+    height: 400px;
+}
+
+.content-right {
+    flex: 1;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.content-right h2{
+    font-size: 48px;
+    margin: 0px 0px 32px;
+}
+
+.content-right p{
+    font-size: 18px;
+}
+
+
+/* Features */
+.features {
+    text-align: center;
+    padding: 16px;
+}
+
+.features h1 {
+    font-size: 56px;
+    font-weight: bold;
+    font-size: 4xl;
+    margin: 0px 0px 48px;
+}
+
+.features p{
+    /* width: 600px; */
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 0px 0px 48px;
+}
+
+.highlight {
+    color: #2c4094;
+    font-weight: 600;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adjust the spacing between features as needed */
+}
+
+/* Feature */
+.feature {
+    flex: 1;
+    max-width: 70%; /* Each feature takes full width */
+    padding: 16px;
+    background-color: #a5abda;
+    border-radius: 8px;
+}
+
+/* Larger Features */
+.large-feature {
+    max-width: calc(33.33% - 16px); /* Adjust the max-width based on the number of columns and spacing */
+}
+
+.feature h2 {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.feature p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.team {
+    text-align: center;
+    padding: 16px;
+}
+
+.team h1 {
+    font-size: 56px;
+    margin: 0 0 96px;
+}
+
+/* Team Members Container */
+.team-members-container {
+    display: flex;
+    justify-content: center; /* Center the columns horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    gap: 16px; /* Add some spacing between team members */
+}
+
+/* Team Member */
+.team-member {
+    flex: 1;
+    max-width: calc(33.33% - 16px); /* Adjust the max-width based on the number of columns and spacing */
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 409px; /* Set a maximum width for the images */
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin: 16px 0;
+}
+
+.team-member p {
+    font-size: 16px;
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 16px;
+}
+
+.testimonials h1 {
+    font-size: 56px;
+    margin: 0px 0px 48px;
+}
+
+.testimonial-container {
+    text-align: center;
+    padding: 16px;
+}
+
+.testimonial-container h1 {
+    font-size: 36px;
+    margin: 0 0 36px;
+}
+
+.testimonial-container .testimonial {
+    padding: 16px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+    transform: translateY(20px); 
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.testimonial-container .testimonial p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.testimonial-container .testimonial h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+.testimonial-container .testimonial span {
+    font-weight: bold;
+}
+.footer {
+    background-color: #354a9a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    font-size: 16px;
+  }
+  
+  .footer-left {
+    text-align: center;
+  }
+
+  .footer-left p{
+    font-size: 16px;
+  }
+  
+  .copyright {
+    margin-bottom: 3px;
+    color: #fff;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .built-by {
+    margin-top: 3px;
+    color: #fff;
+  }
+  
+  .builder {
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .footer-right {
+    cursor: pointer;
+  }
+  
+  .social-icon {
+    width: 23px;
+    height: auto;
+    margin: 0 6px;
+    color: #fff;
+  }
+  /* styles.css */
+/* styles.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 96px; 
+}
+
+.header {
+    display: flex;
+    flex-direction: row; /* Changed to row for the desired layout */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo img {
+    margin: 50px; 
+}
+
+.slogan {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    margin-top: 12px;
+    margin-left: 150px;
+}
+
+.phone,
+.email,
+.address {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+    max-width: 60%; /* Limit the width to 60% */
+}
+
+.phone i,
+.email i,
+.address i {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    margin-right: 4px;
+}
+
+.phone p,
+.email p,
+.address p {
+    width: 100%;
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-top: 12px;
+    /* align-items: flex-end; Align quick links to the right */
+}
+
+.quick-links a {
+    font-size: 20px;
+}
+
+.link {
+    margin: 2px 0;
+    text-decoration: none;
+    color: #000;
+}
+
+.link:hover {
+    color: #0080ff;
+}
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    nav {
+        /* position: absolute; */
+        justify-content: center;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        top: 100%;
+        right: 0;
+        width: 50vw;
+        color: #fff;
+        background-color: #2c4094;
+        z-index: 2;
+        padding: 1rem;
+        transition: transform .33s ease-out;
+        transform: translateX(0);
+    }
+    .nav-links.active {
+        display: flex;
+        transform: translateX(10%);
+    }
+    .nav-links li {
+        margin: 10px 0;
+        justify-content: center;
+    }
+    .nav-links li a {
+        color: #fff;
+    }
+    .logo-text {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c4094;
+        display: none;
+    }
+    .info {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+    .info p:not(:first-child) {
+        display: none;
+    }
+
+    .header {
+        background-size: cover;
+        height: 100px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        padding: 16px;
+        order: 2;
+    }
+    
+    .header-title {
+        font-weight: bold;
+        font-size: 1.3em;
+        border-bottom: 4px solid white;
+        padding: 10px;
+        background-color: transparent;
+        color: white;
+        margin-left: 20px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column; /* Reverse the flex direction to place the image on top */
+        align-items: center;
+        padding: 48px 32px 0px; /* Adjust the padding as needed */
+    }
+    .content-left img {
+        width: 24em;
+        height: 400px;
+        margin-bottom: 16px; /* Add some spacing between the image and text */
+    }
+    .content-right {
+        flex: 1;
+        padding: 16px;
+        box-sizing: border-box;
+        text-align: center; /* Center the text horizontally */
+    }
+    .content-right h2{
+        font-size: 36px;
+        margin: 0px 0px 12px;
+    }
+    .content-right p{
+        font-size: 18px;
+    }
+    .features h1{
+        font-size: 36px;
+        margin: 0px 0px 24px;
+    }
+    .features-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+    }
+    .feature {
+        flex: 1;
+        max-width: 100%;
+        padding: 16px;
+        background-color: #a5abda;
+        border-radius: 8px;
+    }
+    .feature h2{
+        font-size: 20px;
+        margin: 12px 0px;
+    }
+    .feature p{
+        font-size: 16px;
+    }
+    .team h1{
+        font-size: 36px;
+        margin: 0px 0px 46px;
+        font-weight: 400;
+    }
+    .team-members-container {
+        display: flex;
+        flex-direction: column; /* Change to column layout */
+        align-items: center;
+        gap: 16px; /* Add some spacing between team members */
+    }
+    
+    /* Team Member */
+    .team-member {
+        max-width: 100%; /* Each team member takes the full width */
+        text-align: center;
+    }
+    
+    .team-member img {
+        width: 100%;
+        max-width: 300px; /* Set a maximum width for the images */
+        height: auto;
+        border: 2px solid rgba(240, 230, 220, 0.4);
+        border-radius: 0.75rem;
+    }
+    .team-member h3 {
+        font-size: 24px;
+        margin: 16px 0;
+    }
+    .team-member p {
+        font-size: 18px;
+    }
+    .testimonial p{
+        font-size: 16px;
+    }
+    .testimonial h3{
+        font-size: 20px;
+        margin: 16px 0px 0px;
+    }
+    .footer {
+        margin-top: 580px; 
+        background-color: #354a9a;
+        color: #fff;
+        padding: 16px;
+        font-size: 16px;
+    }
+    .footer-left p{
+        font-size: 14px;
+        text-align: left;
+    }
+    .footer-right{
+        display: none;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start; 
+        display: block;
+    }
+
+    .contact-info {
+        align-items: flex-start; 
+        margin-left: 0;
+    }
+    .container{
+        padding: 10px;
+    }
+    .address,
+    .phone,
+    .email {
+        flex-direction: row;
+        max-width: 100%; 
+    }
+.quick-links{
+    text-align: left;
+}
+.quick-links h2{
+    font-size: 25px;
+}
+.quick-links a{
+    font-size: 18px;
+}
+    }
